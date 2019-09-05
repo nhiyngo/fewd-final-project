@@ -1,1 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Overpass&display=swap");
+
+body {
+  background-color: #2d3436;
+  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+img {
+  margin: auto;
+  background-color: antiquewhite;
+  padding: 2%;
+  opacity: 0.5;
+}
+img:hover {
+  background-color: rgb(151, 160, 160);
+  opacity: 1;
+}
