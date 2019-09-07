@@ -19,3 +19,11 @@ img:hover {
   background-color: rgb(151, 160, 160);
   opacity: 1;
 }
+.details {
+  display: flex;
+  justify-content: center;
+}
+.details img {
+  padding: 1%;
+  margin: 10px;
+}
