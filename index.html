@@ -7,6 +7,7 @@
     <title>Movie time!!!</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -25,13 +26,44 @@
     <main>
       <section id="comedies">
         <div class="container">
-          <img src="images/comedy1.jpg" alt="Where'd You Go Bernadette" />
-          <img src="images/comedy2.jpg" alt="Brittany Runs a Marathon" />
-          <img src="images/comedy3.jpg" alt="Good Boys" />
-          <img src="images/comedy4.jpg" alt="The Farewell" />
+          <img
+            class="poster"
+            src="images/comedy1.jpg"
+            alt="Where'd You Go Bernadette"
+            onclick="currentSlide(1)"
+          />
+          <img
+            class="poster"
+            src="images/comedy2.jpg"
+            alt="Brittany Runs a Marathon"
+            onclick="currentSlide(2)"
+          />
+          <img
+            class="poster"
+            src="images/comedy3.jpg"
+            alt="Good Boys"
+            onclick="currentSlide(3)"
+          />
+          <img
+            class="poster"
+            src="images/comedy4.jpg"
+            alt="The Farewell"
+            onclick="currentSlide(4)"
+          />
         </div>
-        <div class="details">
-          <img src="images/comedy1details.jpg" alt="comedy1details" />
+        <div class="gallery">
+          <div class="details">
+            <img src="images/comedy1details.jpg" alt="comedy1details" />
+          </div>
+          <div class="details">
+            <img src="images/comedy2details.jpg" alt="comedy1details" />
+          </div>
+          <div class="details">
+            <img src="images/comedy3details.jpg" alt="comedy1details" />
+          </div>
+          <div class="details">
+            <img src="images/comedy4details.jpg" alt="comedy1details" />
+          </div>
         </div>
       </section>
       <section id="actions"></section>

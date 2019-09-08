@@ -4,26 +4,32 @@ body {
   background-color: #2d3436;
   font-family: "Overpass", sans-serif;
 }
-
 .container {
   display: flex;
   justify-content: space-between;
 }
-img {
+.poster {
   margin: auto;
   background-color: antiquewhite;
   padding: 2%;
   opacity: 0.5;
 }
-img:hover {
-  background-color: rgb(151, 160, 160);
+.poster:hover {
+  background-color: greenyellow;
+  opacity: 1;
+  cursor: pointer;
+}
+.poster:active {
   opacity: 1;
 }
-.details {
+.gallery {
   display: flex;
   justify-content: center;
 }
-.details img {
-  padding: 1%;
+.details {
+  display: none;
   margin: 10px;
+  background-color: antiquewhite;
+  padding: 2%;
+  opacity: 0.5;
 }
