@@ -5,7 +5,7 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("details");
-  var dots = document.getElementsByClassName("demo");
+  var dots = document.getElementsByClassName("poster");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {
     slideIndex = 1;
