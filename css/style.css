@@ -22,10 +22,10 @@ main {
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  border-bottom:1px dashed #413e3e;
 }
 
 main h1 {
-  align-self: center;
   color: white;
 }
 
