@@ -1,56 +1,85 @@
-.flex {
+header {
+  position: relative;
+  left: 35px;
+}
+
+h1#logo {
+  position: absolute;
+  top: 37px;
+}
+
+h1#logo a {
+  float: left;
+  width: 255px;
+  height: 49px;
+  background: url(/images/logo.gif);
+  background-repeat: no-repeat;
+  text-indent: -999px;
+}
+
+/* Styling Navigation */
+#navigation ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 50px 5px 47px 28px;
 }
 
-.dropdown label {
-  position: fixed;
-  right: 15px;
-  top: 10px;
-  background-color: #333;
-  color: white;
-  font-size: 1.4rem;
-  border-radius: 5px;
-  padding: 0px 11px;
-}
-
-#toggle {
-  display: none;
-}
-
-#toggle:checked~ul {
-  display: block;
-  /* max-height: 300px; */
-}
-
-ul {
-  background-color: #383e4c;
-  display: none;
-  /* top: 40px;
-  right: 15px;
-  left: 15px;
-  padding: 0; */
-  /* position: fixed; */
-  /* overflow: hidden; */
-  /* max-height: 0; */
-  /* transition: max-height 0.8s; */
-}
-
-ul li {
+#navigation ul li {
   list-style-type: none;
-  padding: 8px;
-  /* border-bottom: 1px solid #999; */
-  text-align: center;
-  /* display: none; */
+  padding-left: 29px;
 }
 
-ul li a {
+#navigation ul li a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-size: 1rem;
 }
 
-ul li a:hover,
-ul li a.active {
-  background-color: #49505f;
+#navigation ul li a.active,
+#navigation ul li a:hover {
+  color: #d91d2a;
+  cursor: pointer;
+}
+
+/* Styling Sub-Navigation */
+#sub-navigation {
+  border-top: 1px dashed #666;
+  border-bottom: 1px dashed #666;
+  padding: 8px 0;
+  display: flex;
+}
+
+#sub-navigation ul {
+  display: flex;
+  flex: 1;
+}
+
+#sub-navigation ul li {
+  list-style-type: none;
+  padding-right: 23px;
+}
+
+#sub-navigation ul li a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+#sub-navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Styling search form */
+#search {
+  padding-right: 5px;
+}
+
+#search label {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
 }

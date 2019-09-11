@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Movie time!!!</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Movie time!!!</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!--Start Header section-->
     <header>
-      <nav>
-        <div class="dropdown">
-          <input type="checkbox" id="toggle" />
-          <label for="toggle">&#9776;</label>
-          <ul id="menu" class="flex">
-            <li><a href="#comedies" class="active">Comedies</a></li>
-            <li><a href="#action">Actions</a></li>
-            <li><a href="#drama">Drama</a></li>
-          </ul>
+      <h1 id="logo"><a href="#">MovieHunter</a></h1>
+      <div id="navigation">
+        <ul id="menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#theaters">In Theaters</a></li>
+          <li><a href="#coming-soon">Coming Soon</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="sub-navigation">
+        <ul>
+          <li><a href="#comedies">Comedies</li>
+          <li><a href="#action">Actions</li>
+          <li><a href="#drama">Drama</li>
+        </ul>
+        <div id="search">
+          <form action="#" method="get">
+            <label for="search-field">SEARCH</label>
+            <input type="text" name="search field" value="Enter search here" id="search-field"
+              class="search-field" />
+            <input type="submit" value="GO!" class="search-button" />
+          </form>
         </div>
-      </nav>
+      </div>
     </header>
+    <!--End Header section-->
     <main>
       <h1>COMEDIES</h1>
       <section id="comedies">
         <div class="container">
-          <img
-            class="poster"
-            src="images/comedy1.jpg"
-            alt="Where'd You Go Bernadette"
-            onclick="currentSlide(1)"
-          />
-          <img
-            class="poster"
-            src="images/comedy2.jpg"
-            alt="Brittany Runs a Marathon"
-            onclick="currentSlide(2)"
-          />
-          <img
-            class="poster"
-            src="images/comedy3.jpg"
-            alt="Good Boys"
-            onclick="currentSlide(3)"
-          />
-          <img
-            class="poster"
-            src="images/comedy4.jpg"
-            alt="The Farewell"
-            onclick="currentSlide(4)"
-          />
+          <img class="poster" src="images/comedy1.jpg" alt="Where'd You Go Bernadette" onclick="currentSlide(1)" />
+          <img class="poster" src="images/comedy2.jpg" alt="Brittany Runs a Marathon" onclick="currentSlide(2)" />
+          <img class="poster" src="images/comedy3.jpg" alt="Good Boys" onclick="currentSlide(3)" />
+          <img class="poster" src="images/comedy4.jpg" alt="The Farewell" onclick="currentSlide(4)" />
         </div>
         <div class="gallery fade">
           <div class="details fade">
@@ -99,30 +98,10 @@
       <h1>ACTION</h1>
       <section id="action">
         <div class="container">
-          <img
-            class="poster"
-            src="images/action1.jpg"
-            alt="Hobbs & Shaw"
-            onclick="currentSlide(5)"
-          />
-          <img
-            class="poster"
-            src="images/action2.jpg"
-            alt="Angel Has Fallen"
-            onclick="currentSlide(6)"
-          />
-          <img
-            class="poster"
-            src="images/action3.jpg"
-            alt="Seven Samurai"
-            onclick="currentSlide(7)"
-          />
-          <img
-            class="poster"
-            src="images/action4.jpg"
-            alt="Night Hunter"
-            onclick="currentSlide(8)"
-          />
+          <img class="poster" src="images/action1.jpg" alt="Hobbs & Shaw" onclick="currentSlide(5)" />
+          <img class="poster" src="images/action2.jpg" alt="Angel Has Fallen" onclick="currentSlide(6)" />
+          <img class="poster" src="images/action3.jpg" alt="Seven Samurai" onclick="currentSlide(7)" />
+          <img class="poster" src="images/action4.jpg" alt="Night Hunter" onclick="currentSlide(8)" />
         </div>
         <div class="gallery fade">
           <div class="details fade">
@@ -170,30 +149,11 @@
       <h1>DRAMA</h1>
       <section id="drama">
         <div class="container">
-          <img
-            class="poster"
-            src="images/drama1.jpg"
-            alt="The Peanut Butter Falcon"
-            onclick="currentSlide(9)"
-          />
-          <img
-            class="poster"
-            src="images/drama2.jpg"
-            alt="Once Upon A Time In...Hollywood"
-            onclick="currentSlide(10)"
-          />
-          <img
-            class="poster"
-            src="images/drama3.jpg"
-            alt="Overcomer"
-            onclick="currentSlide(11)"
-          />
-          <img
-            class="poster"
-            src="images/drama4.jpg"
-            alt="The Mountain"
-            onclick="currentSlide(12)"
-          />
+          <img class="poster" src="images/drama1.jpg" alt="The Peanut Butter Falcon" onclick="currentSlide(9)" />
+          <img class="poster" src="images/drama2.jpg" alt="Once Upon A Time In...Hollywood"
+            onclick="currentSlide(10)" />
+          <img class="poster" src="images/drama3.jpg" alt="Overcomer" onclick="currentSlide(11)" />
+          <img class="poster" src="images/drama4.jpg" alt="The Mountain" onclick="currentSlide(12)" />
         </div>
         <div class="gallery fade">
           <div class="details fade">
@@ -242,5 +202,7 @@
     <footer>
       Copyright Contact-Us
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>
