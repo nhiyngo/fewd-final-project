@@ -13,26 +13,40 @@ body {
   background: url(/images/body-bg.gif);
 }
 
+h1 {
+  font-size: 0.8rem;
+  color: #f2a223;
+}
+
 #wrapper {
-  width: 980px;
+  width: 1200px;
   margin: 0 auto;
 }
 
-main {
+#main {
+  border-bottom: 1px dashed #413e3e;
+  padding: 0 35px;
+}
+
+.box {
+  width: 1200px;
+  border-bottom: 1px dashed #413e3e;
+  padding-bottom: 21px;
+}
+
+.box .movie-genres {
+  padding-top: 14px;
+  padding-bottom: 11px;
+}
+
+.movie {
   display: flex;
   flex-direction: column;
-  align-content: space-around;
-  border-bottom:1px dashed #413e3e;
 }
 
-main h1 {
-  color: white;
-}
-
-.container {
+.movie-poster {
   display: flex;
-  justify-content: space-between;
-  margin: 10px;
+  flex-direction: column;
 }
 
 .poster {
@@ -81,7 +95,7 @@ main h1 {
   font-size: 30px;
 }
 
-p {
+/* p {
   position: absolute;
   top: 60%;
   left: 75%;
@@ -91,7 +105,7 @@ p {
   background-color: #333;
   opacity: 0.8;
   text-align: left;
-}
+} */
 
 @-webkit-keyframes fade {
   from {
