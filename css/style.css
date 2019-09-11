@@ -32,6 +32,7 @@ h1 {
   width: 1200px;
   border-bottom: 1px dashed #413e3e;
   padding-bottom: 21px;
+  display: flex;
 }
 
 .box .movie-genres {
@@ -39,20 +40,10 @@ h1 {
   padding-bottom: 11px;
 }
 
-.movie {
-  display: flex;
-  flex-direction: column;
-}
-
-.movie-poster {
-  display: flex;
-  flex-direction: column;
-}
-
 .poster {
   margin: auto;
   background-color: black;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.8s;
 }
@@ -68,10 +59,10 @@ h1 {
   opacity: 1;
 }
 
-.gallery {
+/* .gallery {
   display: flex;
   justify-content: center;
-}
+} */
 
 .details {
   display: none;
