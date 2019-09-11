@@ -1,6 +1,6 @@
 header {
   position: relative;
-  left: 35px;
+  left: 30px;
 }
 
 h1#logo {
@@ -21,7 +21,7 @@ h1#logo a {
 #navigation ul {
   display: flex;
   justify-content: flex-end;
-  padding: 50px 5px 47px 28px;
+  padding: 50px 0px 47px 0px;
 }
 
 #navigation ul li {

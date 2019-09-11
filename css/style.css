@@ -19,7 +19,7 @@ h1 {
 }
 
 #wrapper {
-  width: 1200px;
+  width: 980px;
   margin: 0 auto;
 }
 
@@ -28,21 +28,20 @@ h1 {
   padding: 0 35px;
 }
 
+.movie-genres {
+  padding: 14px 0;
+}
+
 .box {
-  width: 1200px;
+  width: 980px;
   border-bottom: 1px dashed #413e3e;
   padding-bottom: 21px;
   display: flex;
-}
-
-.box .movie-genres {
-  padding-top: 14px;
-  padding-bottom: 11px;
+  justify-content: center;
 }
 
 .poster {
-  margin: auto;
-  background-color: black;
+  padding-right: 15px;
   /* opacity: 0.5; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.8s;
