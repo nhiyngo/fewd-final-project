@@ -19,6 +19,16 @@ h1 {
   margin-left: -15px;
 }
 
+a {
+  color: #e7b038;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 #wrapper {
   width: 980px;
   margin: 0 auto;
@@ -29,7 +39,7 @@ h1 {
   padding: 0 45px;
 }
 
-.movie-genres {
+.head {
   padding: 14px 0;
 }
 
@@ -42,7 +52,7 @@ h1 {
 }
 
 .poster {
-  padding-right: 15px;
+  padding-right: 13px;
   /* opacity: 0.5; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.8s;
@@ -57,6 +67,38 @@ h1 {
 
 .poster:active {
   opacity: 1;
+}
+
+.rating {
+  width: 152px;
+  padding-top: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating p {
+  font-size: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.rating .stars {
+  width: 60px;
+  height: 11px;
+  background: url(/images/stars.gif) no-repeat;
+  margin-left: -35px;
+}
+
+.rating .stars-in {
+  width: 48px;
+  height: 11px;
+  display: inline;
+  background: url(/images/stars.gif) no-repeat 0 bottom;
+  position: absolute;
+}
+
+.comments {
+  background: url(/images/comments.gif) no-repeat;
 }
 
 /* .gallery {
@@ -123,4 +165,72 @@ h1 {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+/* Styling News and Coming Soon section */
+#news {
+  width: 460px;
+}
+
+#news .head {
+  width: 460px;
+  padding-top: 11px;
+  padding-bottom: 14px;
+}
+
+#news h3,
+#coming h3 {
+  font-size: 0.9rem;
+  color: white;
+}
+
+#news h4,
+#coming h4 {
+  font-size: 0.9rem;
+  color: #f2a223;
+  text-decoration: none;
+}
+
+#coming {
+  padding-left: 30px;
+}
+
+#coming .head {
+  padding-top: 11px;
+  padding-bottom: 14px;
+}
+
+#coming .content {
+  /* min-height: 130px; */
+  /* height: 130px; */
+  padding-bottom: 20px;
+}
+
+#coming .content h4 {
+  padding-bottom: 3px;
+}
+
+.content {
+  padding-bottom: 28px;
+}
+
+.content .date {
+  font-size: 10px;
+  color: #fff;
+}
+
+.content img {
+  float: left;
+  width: 68px;
+  padding-right: 8px;
+}
+
+.content p {
+  font-size: 13px;
+  color: #fff;
+  line-height: 16px;
+}
+
+.content a {
+  font-size: 11px;
 }
