@@ -14,8 +14,9 @@ body {
 }
 
 h1 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #f2a223;
+  margin-left: -15px;
 }
 
 #wrapper {
