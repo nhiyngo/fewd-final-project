@@ -6,6 +6,7 @@ header {
 h1#logo {
   position: absolute;
   top: 37px;
+  left: 18px;
 }
 
 h1#logo a {
