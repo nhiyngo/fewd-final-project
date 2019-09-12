@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass:400,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Overpass:400,800&display=swap");
 
 * {
   margin: 0;
@@ -42,8 +42,7 @@ h1 {
 
 .poster {
   padding-right: 15px;
-  /* opacity: 0.5; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.5;
   transition: 0.8s;
 }
 
@@ -51,18 +50,15 @@ h1 {
   background-color: #333;
   opacity: 1;
   cursor: pointer;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .poster:active {
   opacity: 1;
 }
-
-/* .gallery {
+.gallery {
   display: flex;
   justify-content: center;
-} */
-
+}
 .details {
   display: none;
   margin: 10px;
@@ -85,7 +81,7 @@ h1 {
   font-size: 30px;
 }
 
-/* p {
+p {
   position: absolute;
   top: 60%;
   left: 75%;
@@ -95,7 +91,7 @@ h1 {
   background-color: #333;
   opacity: 0.8;
   text-align: left;
-} */
+}
 
 @-webkit-keyframes fade {
   from {
