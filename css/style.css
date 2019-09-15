@@ -44,11 +44,11 @@ a:hover {
 }
 
 .box {
-  width: 980px;
+  width: 1000px;
   border-bottom: 1px dashed #413e3e;
   padding-bottom: 21px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .poster {
@@ -88,9 +88,7 @@ a:hover {
   margin-left: -35px;
 }
 
-.rating .stars-in {
-  width: 48px;
-  height: 11px;
+.rating.stars-in {
   display: inline;
   background: url(/images/stars.gif) no-repeat 0 bottom;
   position: absolute;
@@ -116,12 +114,16 @@ a:hover {
   /* left: 0;
   top: 5rem; */
 }
-
+.gallery.fade {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  width: 1000px;
+}
 .details img {
   width: 980px;
   height: auto;
 }
-
 .details h1 {
   position: absolute;
   top: 10%;
@@ -132,7 +134,6 @@ a:hover {
   opacity: 0.8;
   font-size: 30px;
 }
-
 .details p {
   position: absolute;
   width: 600px;
