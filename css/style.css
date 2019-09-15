@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #2d3436;
+  /* background-color: #2d3436; */
   font-family: "Overpass", sans-serif;
   color: #ccc;
   background: url(/images/body-bg.gif);
@@ -54,12 +54,12 @@ a:hover {
 .poster {
   padding-right: 13px;
   /* opacity: 0.5; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   transition: 0.8s;
 }
 
 .poster:hover {
-  background-color: #333;
+  /* background-color: #333; */
   opacity: 1;
   cursor: pointer;
 }
@@ -98,10 +98,12 @@ a:hover {
 .comments {
   background: url(/images/comments.gif) no-repeat;
 }
+
 .gallery {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
+
 .details {
   display: none;
   margin: 10px;
@@ -111,6 +113,13 @@ a:hover {
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.8s;
+  /* left: 0;
+  top: 5rem; */
+}
+
+.details img {
+  width: 980px;
+  height: auto;
 }
 
 .details h1 {
@@ -124,10 +133,11 @@ a:hover {
   font-size: 30px;
 }
 
-p {
+.details p {
   position: absolute;
-  top: 60%;
-  left: 75%;
+  width: 600px;
+  top: 90%;
+  left: 65%;
   transform: translate(-50%, -50%);
   color: white;
   padding: 1%;
