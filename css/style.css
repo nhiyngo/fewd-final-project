@@ -30,7 +30,7 @@ a:hover {
 }
 
 #wrapper {
-  width: 980px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -96,12 +96,6 @@ a:hover {
 .comments {
   background: url(/images/comments.gif) no-repeat;
 }
-
-.gallery {
-  display: flex;
-  /* justify-content: center; */
-}
-
 .details {
   display: none;
   margin: 10px;
@@ -119,6 +113,21 @@ a:hover {
   justify-self: center;
   justify-content: center;
   width: 1000px;
+}
+.close {
+  color: white;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
 }
 .details img {
   width: 980px;
