@@ -1,22 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass:400,800&display=swap");
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  /* background-color: #2d3436; */
   font-family: "Overpass", sans-serif;
   color: #ccc;
   background: url(/images/body-bg.gif);
-}
-
-h1 {
-  font-size: 0.7rem;
-  color: #f2a223;
-  margin-left: -15px;
 }
 
 a {
@@ -29,50 +22,49 @@ a:hover {
   text-decoration: none;
 }
 
-#wrapper {
-  width: 1000px;
-  margin: 0 auto;
-}
-
 #main {
   border-bottom: 1px dashed #413e3e;
-  padding: 0 45px;
+  padding-top: 120px;
 }
 
 .head {
-  padding: 14px 0;
+  padding-top: 20px;
+}
+
+.head h1 {
+  font-size: 0.7rem;
+  color: #f2a223;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 
 .box {
-  width: 1000px;
   border-bottom: 1px dashed #413e3e;
-  padding-bottom: 21px;
+  padding-bottom: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  /* position: relative; */
+  margin: 0 4px 10px 4px;
 }
 
 .poster {
-  padding-right: 13px;
-  /* opacity: 0.5; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   transition: 0.8s;
+  height: 160px;
+  width: 130px;
 }
 
 .poster:hover {
-  /* background-color: #333; */
-  opacity: 1;
   cursor: pointer;
 }
 
-.poster:active {
-  opacity: 1;
-}
-
 .rating {
-  width: 152px;
-  padding-top: 2px;
   display: flex;
   justify-content: space-between;
+  width: 130px;
 }
 
 .rating p {
@@ -84,18 +76,19 @@ a:hover {
 .rating .stars {
   width: 60px;
   height: 11px;
-  background: url(/images/stars.gif) no-repeat;
-  margin-left: -35px;
+  background: url(/images/stars.gif) no-repeat 0 bottom;
+  margin-left: -8px;
 }
 
-.rating.stars-in {
-  display: inline;
-  background: url(/images/stars.gif) no-repeat 0 bottom;
-  position: absolute;
+.rating span {
+  font-size: 12px;
 }
+
 .comments {
-  background: url(/images/comments.gif) no-repeat;
+  background: url(/images/comments.gif) no-repeat 0 3px;
+  padding-left: 12px;
 }
+
 .details {
   display: none;
   margin: 10px;
@@ -108,19 +101,21 @@ a:hover {
   /* left: 0;
   top: 5rem; */
 }
+
 .gallery.fade {
-  display: flex;
+  /* display: flex;
   justify-self: center;
   justify-content: center;
-  width: 1000px;
+  width: 1000px; */
 }
+
 .close {
-  color: white;
+  /* color: white;
   position: absolute;
   top: 25px;
   right: 25px;
   font-size: 35px;
-  font-weight: bold;
+  font-weight: bold; */
 }
 
 .close:hover,
@@ -129,10 +124,12 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
 .details img {
   width: 980px;
   height: auto;
 }
+
 .details h1 {
   position: absolute;
   top: 10%;
@@ -143,6 +140,7 @@ a:hover {
   opacity: 0.8;
   font-size: 30px;
 }
+
 .details p {
   position: absolute;
   width: 600px;
@@ -181,4 +179,50 @@ a:hover {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+/* Styling News and Coming Soon section */
+#news,
+#coming {
+  margin: 0 25px;
+  border-bottom: 1px dashed #413e3e;
+}
+
+#news .head h3,
+#coming .head h3 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.content {
+  margin-bottom: 30px;
+  color: white;
+  line-height: 1.4;
+}
+
+.content .date {
+  font-size: 0.65rem;
+}
+
+.content p,
+.content a {
+  font-size: 0.8rem;
+}
+
+.content-container h4 {
+  color: #e7b038;
+  font-size: 0.9rem;
+}
+
+/* Styling footer */
+footer {
+  margin: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 0.7rem;
 }

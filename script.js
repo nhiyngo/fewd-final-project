@@ -1,6 +1,7 @@
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("details");
@@ -21,4 +22,25 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+window.onload = function () {
+  //Formatting responsive navigation menu
+  var navbar = document.getElementById("navbar");
+  var checkbox = document.getElementById("check");
+  var wrapper = document.getElementById("wrapper");
+  // var upScroll = document.getElementById("top-scroll");
+
+  navbar.style.display = (document.documentElement.clientWidth > 770) ? "block" : "none";
+
+  checkbox.addEventListener("change", function () {
+    navbar.style.height = (this.checked) ? "auto" : "0";
+    navbar.style.display = (this.checked) ? "block" : "none";
+  }, false)
+
+  window.onresize = function () {
+    navbar.style.top = (window.innerWidth <= 770) ? wrapper.scrollTop + 50 + "px" : wrapper.scrollTop + "px";
+    navbar.style.height = (document.documentElement.clientWidth > 770) ? "auto" : (checkbox.checked) ? "auto" : "0";
+    navbar.style.display = (document.documentElement.clientWidth > 770) ? "block" : (checkbox.checked) ? "block" : "none";
+  }
 }

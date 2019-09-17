@@ -1,0 +1,55 @@
+@media (min-width: 414px) {
+	.rating {
+		width: 160px;
+	}
+
+	.rating .stars {
+		margin-left: -36px;
+	}
+
+	.rating {
+		width: 160px;
+	}
+
+	.rating .stars {
+		margin-left: -36px;
+	}
+}
+
+@media (min-width: 504px) {
+	.box {
+		width: 503px;
+		margin: auto;
+	}
+
+	.movie {
+		margin: 0 5px;
+	}
+}
+
+@media (min-width: 720px) {
+	.box {
+		width: 720px;
+	}
+
+	.poster {
+		height: 230px;
+		width: 175px;
+	}
+
+	.rating {
+		width: 175px;
+	}
+
+	.rating .stars {
+		margin-left: -50px;
+	}
+
+	#coming .content {
+		display: flex;
+	}
+
+	.content a {
+		margin-right: 10px;
+	}
+}
