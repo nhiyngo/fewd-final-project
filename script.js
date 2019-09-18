@@ -31,7 +31,7 @@ window.onload = function () {
   var wrapper = document.getElementById("wrapper");
   // var upScroll = document.getElementById("top-scroll");
 
-  navbar.style.display = (document.documentElement.clientWidth > 770) ? "block" : "none";
+  navbar.style.display = (document.documentElement.clientWidth > 767) ? "block" : "none";
 
   checkbox.addEventListener("change", function () {
     navbar.style.height = (this.checked) ? "auto" : "0";
@@ -39,8 +39,8 @@ window.onload = function () {
   }, false)
 
   window.onresize = function () {
-    navbar.style.top = (window.innerWidth <= 770) ? wrapper.scrollTop + 50 + "px" : wrapper.scrollTop + "px";
-    navbar.style.height = (document.documentElement.clientWidth > 770) ? "auto" : (checkbox.checked) ? "auto" : "0";
-    navbar.style.display = (document.documentElement.clientWidth > 770) ? "block" : (checkbox.checked) ? "block" : "none";
+    // navbar.style.top = (window.innerWidth <= 767) ? wrapper.scrollTop + 50 + "px" : wrapper.scrollTop + "px";
+    navbar.style.height = (document.documentElement.clientWidth > 767) ? "auto" : (checkbox.checked) ? "auto" : "0";
+    navbar.style.display = (document.documentElement.clientWidth > 767) ? "block" : (checkbox.checked) ? "block" : "none";
   }
 }

@@ -28,7 +28,7 @@ a:hover {
 }
 
 .head {
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .head h1 {
@@ -47,8 +47,7 @@ a:hover {
 }
 
 .movie {
-  /* position: relative; */
-  margin: 0 4px 10px 4px;
+  margin: 7px 5px;
 }
 
 .poster {
@@ -75,9 +74,9 @@ a:hover {
 
 .rating .stars {
   width: 60px;
-  height: 11px;
+  height: 12px;
   background: url(/images/stars.gif) no-repeat 0 bottom;
-  margin-left: -8px;
+  margin-left: -6px;
 }
 
 .rating span {
@@ -126,7 +125,7 @@ a:hover {
 }
 
 .details img {
-  width: 980px;
+  /* width: 980px; */
   height: auto;
 }
 
@@ -143,7 +142,7 @@ a:hover {
 
 .details p {
   position: absolute;
-  width: 600px;
+  /* width: 600px; */
   top: 90%;
   left: 65%;
   transform: translate(-50%, -50%);
@@ -197,7 +196,7 @@ a:hover {
 }
 
 .content {
-  margin-bottom: 30px;
+  margin: 2px 0 30px 0;
   color: white;
   line-height: 1.4;
 }
@@ -208,9 +207,10 @@ a:hover {
 
 .content p,
 .content a {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
+.content h4,
 .content-container h4 {
   color: #e7b038;
   font-size: 0.9rem;

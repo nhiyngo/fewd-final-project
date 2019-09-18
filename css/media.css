@@ -1,39 +1,117 @@
-@media (min-width: 414px) {
-	.rating {
-		width: 160px;
-	}
-
-	.rating .stars {
-		margin-left: -36px;
-	}
-
-	.rating {
-		width: 160px;
-	}
-
-	.rating .stars {
-		margin-left: -36px;
-	}
-}
-
-@media (min-width: 504px) {
+@media screen and (min-width: 414px) {
 	.box {
-		width: 503px;
+		width: 413px;
 		margin: auto;
 	}
-
-	.movie {
-		margin: 0 5px;
-	}
 }
 
-@media (min-width: 720px) {
+@media screen and (min-width: 600px) and (max-width: 767px) {
 	.box {
-		width: 720px;
+		width: 600px;
 	}
 
 	.poster {
-		height: 230px;
+		height: 190px;
+		width: 135px;
+	}
+
+	.rating {
+		width: 133px;
+	}
+
+	.rating .stars {
+		margin-left: -5px;
+	}
+
+	#coming .content {
+		display: flex;
+	}
+
+	#description {
+		margin-left: 10px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	#wrapper {
+		width: 768px;
+		margin: 0 auto;
+	}
+
+	h1#logo a {
+		background-size: 100%;
+		height: 50px;
+	}
+
+	/* Navbar */
+	#navbar {
+		background: url(/images/body-bg.gif);
+		position: relative;
+		top: 20px;
+		left: 150px;
+		width: 450px;
+	}
+
+	#nav-links {
+		flex-direction: row;
+	}
+
+	#nav-links li a {
+		color: #fff;
+		font-weight: bold;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	/* Sub navbar */
+	#sub-navbar {
+		margin-top: 20px;
+		padding: 5px 0;
+		display: flex;
+	}
+
+	#sub-navbar ul {
+		flex: 1;
+	}
+
+	/* Search form */
+	#search {
+		display: flex;
+	}
+
+	#search label {
+		color: #fff;
+		font-size: 0.9rem;
+		font-weight: bold;
+		padding-right: 6px;
+	}
+
+	#search .search-field {
+		width: 238px;
+		border: 1px solid #413e3e;
+		background: #000;
+		color: #787878;
+		padding: 2px 0 2px 2px;
+	}
+
+	#search .search-button {
+		font-size: 0.9rem;
+		font-weight: bold;
+		border: 0;
+		background: none;
+		color: #fff;
+	}
+
+	/* Main */
+	.box {
+		width: 768px;
+	}
+
+	.poster {
+		height: 250px;
 		width: 175px;
 	}
 
@@ -45,11 +123,44 @@
 		margin-left: -50px;
 	}
 
+	#latter-section {
+		display: flex;
+		border-bottom: 1px dashed #413e3e;
+	}
+
 	#coming .content {
 		display: flex;
 	}
 
-	.content a {
-		margin-right: 10px;
+	#description {
+		margin-left: 10px;
+	}
+
+	#news,
+	#coming {
+		border-bottom: none;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	#navbar {
+		left: 255px;
+	}
+
+	#wrapper {
+		width: 980px;
+	}
+
+	.poster {
+		height: 260px;
+		width: 180px;
+	}
+
+	.rating {
+		width: 180px;
+	}
+
+	.rating .stars {
+		margin-left: -55px;
 	}
 }

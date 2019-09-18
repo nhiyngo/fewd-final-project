@@ -1,3 +1,4 @@
+
 /* Styling logo */
 header {
   position: relative;
@@ -126,27 +127,3 @@ h1#logo a {
 #search {
   display: none;
 }
-
-/* #search label {
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding-right: 6px;
-}
-
-#search .search-field {
-  width: 238px;
-  border: 1px solid #413e3e;
-  background: #000;
-  color: #787878;
-  padding: 2px 0 2px 2px;
-  outline: none;
-}
-
-#search .search-button {
-  font-size: 0.9rem;
-  font-weight: bold;
-  border: 0;
-  background: none;
-  color: #fff;
-} */
