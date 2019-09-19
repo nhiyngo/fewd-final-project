@@ -142,13 +142,13 @@
 	}
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 950px) {
 	#navbar {
-		left: 255px;
+		left: 193px;
 	}
 
 	#wrapper {
-		width: 980px;
+		width: 850px;
 	}
 
 	.poster {
