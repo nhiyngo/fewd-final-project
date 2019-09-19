@@ -3,6 +3,11 @@
 		width: 413px;
 		margin: auto;
 	}
+
+	.gallery,
+	.details {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
@@ -30,10 +35,92 @@
 	#description {
 		margin-left: 10px;
 	}
+
+	/* Poster display when click */
+	.gallery {
+		display: block;
+	}
+
+	.details {
+		display: none;
+		opacity: 1;
+		position: relative;
+		color: black;
+		transition: 0.8s;
+		width: 600px;
+		margin: 0 auto;
+	}
+
+	.details img {
+		width: 600px;
+		height: auto;
+	}
+
+	.details h1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1%;
+		font-size: 20px;
+		background-color: rgba(245, 245, 245, 0.5);
+		border-radius: 5px;
+	}
+
+	.details p {
+		font-size: 14px;
+		position: absolute;
+		bottom: 7px;
+		padding: 0 10px;
+		background-color: rgba(245, 245, 245, 0.5);
+		border-radius: 5px;
+		text-align: left;
+	}
+
+	/* .close {
+			color: white;
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			font-size: 35px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #999;
+			text-decoration: none;
+			cursor: pointer;
+		} */
+
+	@-webkit-keyframes fade {
+		from {
+			opacity: 0.2;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0.4;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
 }
 
 @media screen and (min-width: 768px) {
-
 	#wrapper {
 		width: 768px;
 		margin: 0 auto;
@@ -139,6 +226,45 @@
 	#news,
 	#coming {
 		border-bottom: none;
+	}
+
+	/* Poster display when click */
+	.gallery {
+		display: block;
+	}
+
+	.details {
+		display: none;
+		opacity: 1;
+		position: relative;
+		color: black;
+		transition: 0.8s;
+		width: 730px;
+		margin: 0 auto;
+	}
+
+	.details img {
+		width: 730px;
+	}
+
+	.details h1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1%;
+		font-size: 20px;
+		background-color: rgba(245, 245, 245, 0.5);
+		border-radius: 5px;
+	}
+
+	.details p {
+		font-size: 14px;
+		position: absolute;
+		bottom: 7px;
+		padding: 0 10px;
+		background-color: rgba(245, 245, 245, 0.5);
+		border-radius: 5px;
+		text-align: left;
 	}
 }
 
