@@ -12,7 +12,7 @@ h1#logo {
 }
 
 h1#logo a {
-  float: left;
+  position: absolute;
   width: 245px;
   height: 45px;
   background: url(/images/logo.gif);
@@ -24,7 +24,6 @@ h1#logo a {
 /* Styling hamburger menu */
 #shrunken-menu {
   position: absolute;
-  display: block;
   top: 5px;
   cursor: pointer;
 }
@@ -108,7 +107,7 @@ h1#logo a {
 
 #sub-navbar ul li {
   list-style-type: none;
-  padding-right: 23px;
+  margin-right: 23px;
 }
 
 #sub-navbar ul li a {
