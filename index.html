@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   <link rel="stylesheet" href="css/media.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
@@ -58,8 +57,8 @@
         </div>
         <div class="box">
           <div class="movie">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy1.jpg" alt="Where'd You Go Bernadette" onclick="currentSlide(1)" />
+            <div class="movie-poster" data-description="Former architect Bernadette Fox seems to have it all -- a beautiful home in Seattle, a successful and loving husband, and a brilliant teenage daughter who's about to attend boarding school. When Bernadette suddenly disappears without a trace, her concerned family sets off on an exciting adventure to solve the mystery of where she might have gone.">
+              <img class="poster" src="images/comedy1.jpg" alt="Where'd You Go Bernadette"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -70,8 +69,11 @@
             </div>
           </div>
           <div class="movie">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy2.jpg" alt="Brittany Runs a Marathon" onclick="currentSlide(2)" />
+            <div class="movie-poster" data-description="A hard-partying woman receives a startling wake-up call when a
+            visit to the doctor reveals how unhealthy she is. Motivated to
+            lose weight, she soon takes up running to help her prepare for her
+            ultimate goal -- competing in the New York City Marathon.">
+              <img class="poster" src="images/comedy2.jpg" alt="Brittany Runs a Marathon"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -82,8 +84,13 @@
             </div>
           </div>
           <div class="movie">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy3.jpg" alt="Good Boys" onclick="currentSlide(3)" />
+            <div class="movie-poster" data-description="Invited to his first kissing party, 12-year-old Max asks his best
+            friends Lucas and Thor for some much-needed help on how to pucker
+            up. When they hit a dead end, Max decides to use his father's
+            drone to spy on the teenage girls next door. When the boys lose
+            the drone, they skip school and hatch a plan to retrieve it before
+            Max's dad can figure out what happened.">
+              <img class="poster" src="images/comedy3.jpg" alt="Good Boys"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -94,8 +101,10 @@
             </div>
           </div>
           <div class="movie last">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy4.jpg" alt="The Farewell" onclick="currentSlide(4)" />
+            <div class="movie-poster" data-description="Billi's family returns to China under the guise of a fake wedding
+            to stealthily say goodbye to their beloved matriarch -- the only
+            person that doesn't know she only has a few weeks to live.">
+              <img class="poster" src="images/comedy4.jpg" alt="The Farewell">
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -161,7 +170,7 @@
         <div class="box">
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/action1.jpg" alt="Hobbs & Shaw" onclick="currentSlide(5)" />
+              <img class="poster" src="images/action1.jpg" alt="Hobbs & Shaw"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -173,7 +182,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/action2.jpg" alt="Angel Has Fallen" onclick="currentSlide(6)" />
+              <img class="poster" src="images/action2.jpg" alt="Angel Has Fallen"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -185,7 +194,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/action3.jpg" alt="Seven Samurai" onclick="currentSlide(7)" />
+              <img class="poster" src="images/action3.jpg" alt="Seven Samurai"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -197,7 +206,7 @@
           </div>
           <div class="movie last">
             <div class="movie-poster">
-              <img class="poster" src="images/action4.jpg" alt="Night Hunter" onclick="currentSlide(8)" />
+              <img class="poster" src="images/action4.jpg" alt="Night Hunter"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -262,7 +271,7 @@
         <div class="box">
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/drama1.jpg" alt="The Peanut Butter Falcon" onclick="currentSlide(9)" />
+              <img class="poster" src="images/drama1.jpg" alt="The Peanut Butter Falcon"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -274,8 +283,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/drama2.jpg" alt="Once Upon A Time In...Hollywood"
-                onclick="currentSlide(10)" />
+              <img class="poster" src="images/drama2.jpg" alt="Once Upon A Time In...Hollywood"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -287,7 +295,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/drama3.jpg" alt="Overcomer" onclick="currentSlide(11)" />
+              <img class="poster" src="images/drama3.jpg" alt="Overcomer"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -299,7 +307,7 @@
           </div>
           <div class="movie last">
             <div class="movie-poster">
-              <img class="poster" src="images/drama4.jpg" alt="The Mountain" onclick="currentSlide(12)" />
+              <img class="poster" src="images/drama4.jpg" alt="The Mountain"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -357,6 +365,12 @@
       <!--End Drama section-->
     </div>
 
+    <div class="modal-outer">
+      <div class="modal-inner">
+        <p>Testing 123</p>
+      </div>
+    </div>
+      
     <!--News section-->
     <div id="latter-section">
       <section id="news">
@@ -421,14 +435,14 @@
       </section>
     </div>
     <!--End Coming Soon section-->
-
+    
     <footer>
       <p class="left">Copyright &copy; 2019</p>
       <p class="right">Design by Anthony&Nhi</p>
     </footer>
   </div>
   <!--End Wrapper-->
-
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -48,16 +48,17 @@ a:hover {
 
 .movie {
   margin: 7px 5px;
+  cursor: pointer;
 }
 
 .poster {
-  transition: 0.8s;
+  /* transition: 0.8s; */
   height: 160px;
   width: 130px;
 }
 
 .poster:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .rating {
