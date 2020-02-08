@@ -1,72 +1,74 @@
-// function currentSlide(n) {
-//   showSlides((slideIndex = n));
-// }
-
-// function showSlides(n) {
-//   let i;
-//   var slides = document.getElementsByClassName("details");
-//   var dots = document.getElementsByClassName("poster");
-//   var captionText = document.getElementById("caption");
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//   if (n < 1) {
-//     slideIndex = slides.length;
-//   }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace("active", "");
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-//   captionText.innerHTML = dots[slideIndex - 1].alt;
-// }
-
-// window.onload = function () {
-//   //Formatting responsive navigation menu
-//   var navbar = document.getElementById("navbar");
-//   var checkbox = document.getElementById("check");
-//   var wrapper = document.getElementById("wrapper");
-//   // var upScroll = document.getElementById("top-scroll");
-
-//   navbar.style.display = (document.documentElement.clientWidth > 767) ? "block" : "none";
-
-//   checkbox.addEventListener("change", function () {
-//   navbar.style.height = (this.checked) ? "auto" : "0";
-//   navbar.style.display = (this.checked) ? "block" : "none";
-//   }, false)
-
-//   window.onresize = function () {
-//   // navbar.style.top = (window.innerWidth <= 767) ? wrapper.scrollTop + 50 + "px" : wrapper.scrollTop + "px";
-//   navbar.style.height = (document.documentElement.clientWidth > 767) ? "auto" : (checkbox.checked) ? "auto" : "0";
-//   navbar.style.display = (document.documentElement.clientWidth > 767) ? "block" : (checkbox.checked) ? "block" : "none";
-//   }
-// }
-
+/* eslint-disable prettier/prettier */
+const hamburger = document.querySelector('#hamburger');
+const navbar= document.querySelector('#navbar');
+const content = document.querySelector('#main');
 const moviePoster = document.querySelectorAll('.poster');
 const modalOuter = document.querySelector('.modal-outer');
 const modalInner = document.querySelector('.modal-inner');
 
+function openNavbar() {
+  navbar.classList.toggle('open');
+  content.addEventListener('click',function(e) {
+    const outside = !e.target.closest('navbar');
+    if (outside) {
+      closeNavbar();
+    }
+  });
+}
+
+function closeNavbar() {
+  navbar.classList.remove('open');
+}
+
+hamburger.addEventListener('click', openNavbar);
+
+function handleSmoothScroll() {
+  const anchors = document.querySelectorAll('.smooth-scroll');
+  anchors.forEach(anchor =>
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const el = e.currentTarget;
+      const id = document.getElementById(
+        el.href.match(/#.*$/)[0].slice(1)
+      );
+      id.scrollIntoView({
+        behavior: 'smooth',
+      });
+      closeNavbar();
+    })
+  );
+}
+
+window.addEventListener('load',handleSmoothScroll);
+
+
 function handlePosterClick(e) {
   const elClicked = e.currentTarget;
   const movie = elClicked.closest('.movie-poster');
-  console.log(this);
-  console.log(movie);
 
   // Grab the image src
-  const imgSrc = movie.querySelector('img').src;
+  // const imgSrc = movie.querySelector('img').src;
   const desc = movie.dataset.description;
 
   // populate the modal with the new info
   modalInner.innerHTML =`
-  <img src="${imgSrc}" />
+  <img src="${'images/comedy1details.jpg'}" />
   <p>${desc}</p>
   `;
 
   // show the modal
   modalOuter.classList.add('open');
 }
+
+function closeModal() {
+  modalOuter.classList.remove('open');
+}
+
+modalOuter.addEventListener('click',function(e) {
+  const isOutside = !e.target.closest('.modal-inner');
+  if (isOutside){
+    closeModal();
+  }
+});
 
 moviePoster.forEach(poster => poster.addEventListener('click', handlePosterClick));

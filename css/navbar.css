@@ -1,4 +1,3 @@
-
 /* Styling logo */
 header {
   position: relative;
@@ -22,36 +21,21 @@ h1#logo a {
 }
 
 /* Styling hamburger menu */
-#shrunken-menu {
-  position: absolute;
-  top: 5px;
+button {
+  outline: none;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
-#check {
-  position: absolute;
-  right: 0;
-  display: none;
+button:hover {
+  cursor: pointer;
 }
 
 #hamburger {
-  background-color: rgb(19, 19, 19);
-  height: 35px;
-  width: 45px;
-  border-radius: 5px;
-  right: 8px;
   position: fixed;
-}
-
-#hamburger i {
-  font-size: 25px;
-  box-sizing: border-box;
-  text-align: center;
-  color: white;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding-top: 5px;
+  top: 13px;
+  right: 20px;
 }
 
 /* Styling Navbar */
@@ -62,7 +46,15 @@ h1#logo a {
   left: 20px;
   right: 20px;
   margin: auto;
+  opacity: 0;
+  visibility: hidden;
   z-index: 2;
+  transition: opacity 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
+}
+
+#navbar.open {
+  opacity: 1;
+  visibility: visible;
 }
 
 #nav-links {
