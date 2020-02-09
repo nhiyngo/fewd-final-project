@@ -1,46 +1,98 @@
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+/* eslint-disable prettier/prettier */
+const hamburger = document.querySelector('#hamburger');
+const navbar= document.querySelector('#navbar');
+const content = document.querySelector('#main');
+const moviePosters = document.querySelectorAll('.poster');
+const modalOuter = document.querySelector('.modal-outer');
+const modalInner = document.querySelector('.modal-inner');
+
+const posterDetail = [
+  'images/comedy1details.jpg',
+  'images/comedy2details.jpg',
+  'images/comedy3details.jpg',
+  'images/comedy4details.jpg',
+]
+
+function openNavbar() {
+  navbar.classList.toggle('open');
+  content.addEventListener('click',function(e) {
+    const outside = !e.target.closest('navbar');
+    if (outside) {
+      closeNavbar();
+    }
+  });
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("details");
-  var dots = document.getElementsByClassName("poster");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+function closeNavbar() {
+  navbar.classList.remove('open');
 }
 
-window.onload = function () {
-  //Formatting responsive navigation menu
-  var navbar = document.getElementById("navbar");
-  var checkbox = document.getElementById("check");
-  var wrapper = document.getElementById("wrapper");
-  // var upScroll = document.getElementById("top-scroll");
-
-  navbar.style.display = (document.documentElement.clientWidth > 767) ? "block" : "none";
-
-  checkbox.addEventListener("change", function () {
-    navbar.style.height = (this.checked) ? "auto" : "0";
-    navbar.style.display = (this.checked) ? "block" : "none";
-  }, false)
-
-  window.onresize = function () {
-    // navbar.style.top = (window.innerWidth <= 767) ? wrapper.scrollTop + 50 + "px" : wrapper.scrollTop + "px";
-    navbar.style.height = (document.documentElement.clientWidth > 767) ? "auto" : (checkbox.checked) ? "auto" : "0";
-    navbar.style.display = (document.documentElement.clientWidth > 767) ? "block" : (checkbox.checked) ? "block" : "none";
-  }
+function handleSmoothScroll() {
+  const anchors = document.querySelectorAll('.smooth-scroll');
+  anchors.forEach(anchor =>
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const el = e.currentTarget;
+      const id = document.getElementById(
+        el.href.match(/#.*$/)[0].slice(1)
+        );
+        id.scrollIntoView({
+          behavior: 'smooth',
+        });
+      closeNavbar();
+    })
+  );
 }
+
+window.addEventListener('load',handleSmoothScroll);hamburger.addEventListener('click', openNavbar);
+
+function handlePosterClick(e) {
+  const elClicked = e.currentTarget;
+  const movie = elClicked.closest('.movie-poster');
+  // const posterDetailContainer = document.querySelector('#posterDetailContainer');
+  const fragment = document.createDocumentFragment();
+
+  // Grab the image src
+  // const imgSrc = movie.querySelector('img').src;
+  const desc = movie.dataset.description;
+
+  // populate the modal with the new info
+  // modalInner.innerHTML =`
+  // <img src="${'images/comedy1details.jpg'}" />
+  // <p>${desc}</p>
+  // `;
+  
+  posterDetail.forEach(function(url) {
+    const img = document.createElement('img');
+    img.src = url;
+    fragment.appendChild(img);
+    movie.innerHTML =`
+      <p>${desc}</p>
+    `;
+  });
+  
+  modalInner.appendChild(fragment);
+
+  // show the modal
+  modalOuter.classList.add('open');
+}
+
+function closeModal() {
+  modalOuter.classList.remove('open');
+}
+
+moviePosters.forEach(poster => 
+  poster.addEventListener('click', handlePosterClick));
+
+modalOuter.addEventListener('click',function(e) {
+  const isOutside = !e.target.closest('.modal-inner');
+  if (isOutside){
+    closeModal();
+  }
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});

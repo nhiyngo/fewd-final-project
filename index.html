@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   <link rel="stylesheet" href="css/media.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
@@ -18,26 +17,20 @@
     <!--Start Header section-->
     <header>
       <h1 id="logo"><a href="#">MovieHunter</a></h1>
-      <label id="shrunken-menu">
-        <input id="check" type="checkbox"></input>
-        <span id="hamburger">
-          <i class="fas fa-bars"></i>
-        </span>
-      </label>
+      <button id="hamburger"><i class="fas fa-bars fa-3x" style="color: #fff"></i></button>
       <div id="navbar">
         <ul id="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#comedies">In Theaters</a></li>
-          <li><a href="#coming">Coming Soon</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#main" class="active smooth-scroll">Home</a></li>
+          <li><a href="#news" class="smooth-scroll">News</a></li>
+          <li><a href="#comedies" class="smooth-scroll">In Theaters</a></li>
+          <li><a href="#coming" class="smooth-scroll">Coming Soon</a></li>
         </ul>
       </div>
       <div id="sub-navbar">
         <ul>
-          <li><a href="#comedies">Comedies</a></li>
-          <li><a href="#action">Actions</a></li>
-          <li><a href="#drama">Drama</a></li>
+          <li><a href="#comedies" class="smooth-scroll">Comedies</a></li>
+          <li><a href="#action" class="smooth-scroll">Actions</a></li>
+          <li><a href="#drama" class="smooth-scroll">Drama</a></li>
         </ul>
         <div id="search">
           <form action="#" method="get">
@@ -58,8 +51,8 @@
         </div>
         <div class="box">
           <div class="movie">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy1.jpg" alt="Where'd You Go Bernadette" onclick="currentSlide(1)" />
+            <div class="movie-poster" data-description="Former architect Bernadette Fox seems to have it all -- a beautiful home in Seattle, a successful and loving husband, and a brilliant teenage daughter who's about to attend boarding school. When Bernadette suddenly disappears without a trace, her concerned family sets off on an exciting adventure to solve the mystery of where she might have gone.">
+              <img class="poster" src="images/comedy1.jpg" alt="Where'd You Go Bernadette"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -70,8 +63,11 @@
             </div>
           </div>
           <div class="movie">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy2.jpg" alt="Brittany Runs a Marathon" onclick="currentSlide(2)" />
+            <div class="movie-poster" data-description="A hard-partying woman receives a startling wake-up call when a
+            visit to the doctor reveals how unhealthy she is. Motivated to
+            lose weight, she soon takes up running to help her prepare for her
+            ultimate goal -- competing in the New York City Marathon.">
+              <img class="poster" src="images/comedy2.jpg" alt="Brittany Runs a Marathon"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -82,8 +78,13 @@
             </div>
           </div>
           <div class="movie">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy3.jpg" alt="Good Boys" onclick="currentSlide(3)" />
+            <div class="movie-poster" data-description="Invited to his first kissing party, 12-year-old Max asks his best
+            friends Lucas and Thor for some much-needed help on how to pucker
+            up. When they hit a dead end, Max decides to use his father's
+            drone to spy on the teenage girls next door. When the boys lose
+            the drone, they skip school and hatch a plan to retrieve it before
+            Max's dad can figure out what happened.">
+              <img class="poster" src="images/comedy3.jpg" alt="Good Boys"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -94,8 +95,10 @@
             </div>
           </div>
           <div class="movie last">
-            <div class="movie-poster">
-              <img class="poster" src="images/comedy4.jpg" alt="The Farewell" onclick="currentSlide(4)" />
+            <div class="movie-poster" data-description="Billi's family returns to China under the guise of a fake wedding
+            to stealthily say goodbye to their beloved matriarch -- the only
+            person that doesn't know she only has a few weeks to live.">
+              <img class="poster" src="images/comedy4.jpg" alt="The Farewell">
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -104,49 +107,6 @@
               </div>
               <span class="comments">12</span>
             </div>
-          </div>
-        </div>
-        <div class="gallery fade">
-          <div class="details fade">
-            <img src="images/comedy1details.jpg" alt="comedy1details" />
-            <h1>Where'd You Go Bernadette</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur nobis nemo deleniti, esse, libero placeat vel pariatur,
-              reiciendis nulla dolorem enim minima eum sapiente! Voluptatum
-              asperiores sint illum iste magnam!
-            </p>
-          </div>
-          <div class="details fade">
-            <img src="images/comedy2details.jpg" alt="comedy1details" />
-            <h1>Brittany Runs a Marathon</h1>
-            <p>
-              A hard-partying woman receives a startling wake-up call when a
-              visit to the doctor reveals how unhealthy she is. Motivated to
-              lose weight, she soon takes up running to help her prepare for her
-              ultimate goal -- competing in the New York City Marathon.
-            </p>
-          </div>
-          <div class="details fade">
-            <img src="images/comedy3details.jpg" alt="comedy1details" />
-            <h1>Good Boys</h1>
-            <p>
-              Invited to his first kissing party, 12-year-old Max asks his best
-              friends Lucas and Thor for some much-needed help on how to pucker
-              up. When they hit a dead end, Max decides to use his father's
-              drone to spy on the teenage girls next door. When the boys lose
-              the drone, they skip school and hatch a plan to retrieve it before
-              Max's dad can figure out what happened.
-            </p>
-          </div>
-          <div class="details fade">
-            <img src="images/comedy4details.jpg" alt="comedy1details" />
-            <h1>The Farewell</h1>
-            <p>
-              Billi's family returns to China under the guise of a fake wedding
-              to stealthily say goodbye to their beloved matriarch -- the only
-              person that doesn't know she only has a few weeks to live.
-            </p>
           </div>
         </div>
       </section>
@@ -160,7 +120,7 @@
         <div class="box">
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/action1.jpg" alt="Hobbs & Shaw" onclick="currentSlide(5)" />
+              <img class="poster" src="images/action1.jpg" alt="Hobbs & Shaw"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -172,7 +132,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/action2.jpg" alt="Angel Has Fallen" onclick="currentSlide(6)" />
+              <img class="poster" src="images/action2.jpg" alt="Angel Has Fallen"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -184,7 +144,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/action3.jpg" alt="Seven Samurai" onclick="currentSlide(7)" />
+              <img class="poster" src="images/action3.jpg" alt="Seven Samurai"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -196,7 +156,7 @@
           </div>
           <div class="movie last">
             <div class="movie-poster">
-              <img class="poster" src="images/action4.jpg" alt="Night Hunter" onclick="currentSlide(8)" />
+              <img class="poster" src="images/action4.jpg" alt="Night Hunter"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -207,7 +167,8 @@
             </div>
           </div>
         </div>
-        <div class="gallery fade">
+        
+        <!-- <div class="gallery fade">
           <div class="details fade">
             <img src="images/action1details.jpg" alt="comedy1details" />
             <h1>Hobbs & Shaw</h1>
@@ -248,7 +209,7 @@
               fuga aspernatur!
             </p>
           </div>
-        </div>
+        </div> -->
       </section>
       <!--End Action section-->
 
@@ -260,7 +221,7 @@
         <div class="box">
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/drama1.jpg" alt="The Peanut Butter Falcon" onclick="currentSlide(9)" />
+              <img class="poster" src="images/drama1.jpg" alt="The Peanut Butter Falcon"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -272,8 +233,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/drama2.jpg" alt="Once Upon A Time In...Hollywood"
-                onclick="currentSlide(10)" />
+              <img class="poster" src="images/drama2.jpg" alt="Once Upon A Time In...Hollywood"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -285,7 +245,7 @@
           </div>
           <div class="movie">
             <div class="movie-poster">
-              <img class="poster" src="images/drama3.jpg" alt="Overcomer" onclick="currentSlide(11)" />
+              <img class="poster" src="images/drama3.jpg" alt="Overcomer"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -297,7 +257,7 @@
           </div>
           <div class="movie last">
             <div class="movie-poster">
-              <img class="poster" src="images/drama4.jpg" alt="The Mountain" onclick="currentSlide(12)" />
+              <img class="poster" src="images/drama4.jpg" alt="The Mountain"/>
             </div>
             <div class="rating">
               <p>RATING</p>
@@ -309,7 +269,7 @@
           </div>
         </div>
 
-        <div class="gallery fade">
+        <!-- <div class="gallery fade">
           <div class="details fade">
             <img src="images/drama1details.jpg" alt="comedy1details" />
             <h1>The Peanut Butter Falcon</h1>
@@ -350,11 +310,19 @@
               voluptates voluptatibus, ducimus modi repellendus illum.
             </p>
           </div>
-        </div>
+        </div> -->
       </section>
       <!--End Drama section-->
     </div>
 
+    
+    <div class="modal-outer">
+      <div class="modal-inner">
+        <!-- <div id ="posterDetailContainer"></div> -->
+        <p>Testing 123</p>
+      </div>
+    </div>
+      
     <!--News section-->
     <div id="latter-section">
       <section id="news">
@@ -419,14 +387,14 @@
       </section>
     </div>
     <!--End Coming Soon section-->
-
+    
     <footer>
       <p class="left">Copyright &copy; 2019</p>
       <p class="right">Design by Anthony&Nhi</p>
     </footer>
   </div>
   <!--End Wrapper-->
-
+  <script src="script.js"></script>
 </body>
 
 </html>
