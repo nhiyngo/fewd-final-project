@@ -49,23 +49,23 @@ button:hover {
   opacity: 0;
   visibility: hidden;
   z-index: 2;
-  transition: opacity 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
 }
 
 #navbar.open {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
 }
 
 #nav-links {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 #nav-links li {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0 10px;
 }
 
 #nav-links li a {
@@ -117,4 +117,27 @@ button:hover {
 /* Styling search form */
 #search {
   display: none;
+}
+
+#search label {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-right: 6px;
+}
+
+#search .search-field {
+  width: 238px;
+  border: 1px solid #413e3e;
+  background: #000;
+  color: #787878;
+  padding: 2px 0 2px 2px;
+}
+
+#search .search-button {
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  color: #fff;
 }

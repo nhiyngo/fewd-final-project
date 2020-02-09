@@ -21,10 +21,6 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
-	/* #navbar, .modal-outer {
-		display: none;
-	} */
-
 	.box {
 		width: 600px;
 	}
@@ -59,15 +55,21 @@
 	}
 
 	/* Navbar */
+	#hamburger {
+		display: none;
+	}
+
 	#navbar {
-		display: flex;
 		background: url(/images/body-bg.gif);
 		position: relative;
 		top: 20px;
 		left: 150px;
-		width: 450px;
+		width: 445px;
+		visibility: visible;
+		opacity: 1;
+		z-index: inherit;
 	}
-
+	
 	#nav-links {
 		flex-direction: row;
 	}
@@ -75,10 +77,6 @@
 	#nav-links li a {
 		color: #fff;
 		font-weight: bold;
-	}
-
-	#hamburger {
-		display: none;
 	}
 
 	/* Sub navbar */
@@ -95,29 +93,6 @@
 	/* Search form */
 	#search {
 		display: flex;
-	}
-
-	#search label {
-		color: #fff;
-		font-size: 0.9rem;
-		font-weight: bold;
-		padding-right: 6px;
-	}
-
-	#search .search-field {
-		width: 238px;
-		border: 1px solid #413e3e;
-		background: #000;
-		color: #787878;
-		padding: 2px 0 2px 2px;
-	}
-
-	#search .search-button {
-		font-size: 0.9rem;
-		font-weight: bold;
-		border: 0;
-		background: none;
-		color: #fff;
 	}
 
 	/* Main */
@@ -156,6 +131,7 @@
 		border-bottom: none;
 	}
 
+	/* Modal */
 	.modal-outer {
 		display: grid;
 		background: hsla(0, 0%, 50%, 0.7);
@@ -182,14 +158,14 @@
 	}
 
 	.modal-inner {
-		max-width: 550px;
-		min-width: 200px;
+		max-width: 1000px;
+		min-width: 500px;
 		padding: 1em;
 		border-radius: 5px;
 		min-height: 200px;
 		background: white;
 		color: black;
-		font-size: 14px;
+		font-size: 18px;
 		transform: translateY(-100%);
 		transition: transform 1s;
 	}
