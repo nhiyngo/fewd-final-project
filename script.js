@@ -11,6 +11,14 @@ const posterDetail = [
   'images/comedy2details.jpg',
   'images/comedy3details.jpg',
   'images/comedy4details.jpg',
+  'images/action1details.jpg',
+  'images/action2details.jpg',
+  'images/action3details.jpg',
+  'images/action4details.jpg',
+  'images/drama1details.jpg',
+  'images/drama2details.jpg',
+  'images/drama3details.jpg',
+  'images/drama4details.jpg',
 ]
 
 function openNavbar() {
@@ -44,34 +52,29 @@ function handleSmoothScroll() {
   );
 }
 
-window.addEventListener('load',handleSmoothScroll);hamburger.addEventListener('click', openNavbar);
+window.addEventListener('load',handleSmoothScroll);
+hamburger.addEventListener('click', openNavbar);
 
 function handlePosterClick(e) {
   const elClicked = e.currentTarget;
   const movie = elClicked.closest('.movie-poster');
-  // const posterDetailContainer = document.querySelector('#posterDetailContainer');
-  const fragment = document.createDocumentFragment();
 
   // Grab the image src
-  // const imgSrc = movie.querySelector('img').src;
+  const imgSrc = movie.querySelector('img').src;
+  const imgSrcExtract = imgSrc.slice(22,36);
+  const name = movie.querySelector('img').alt;
   const desc = movie.dataset.description;
 
-  // populate the modal with the new info
-  // modalInner.innerHTML =`
-  // <img src="${'images/comedy1details.jpg'}" />
-  // <p>${desc}</p>
-  // `;
-  
   posterDetail.forEach(function(url) {
-    const img = document.createElement('img');
-    img.src = url;
-    fragment.appendChild(img);
-    movie.innerHTML =`
-      <p>${desc}</p>
+    const urlDetailExtract = url.slice(0,14);
+    if (imgSrcExtract.match(urlDetailExtract)) {
+      // populate the modal with the new info
+      modalInner.innerHTML =`
+      <img src="${urlDetailExtract}details.jpg" alt="${name}" />
+      <p>${desc}</>
     `;
+    }
   });
-  
-  modalInner.appendChild(fragment);
 
   // show the modal
   modalOuter.classList.add('open');
