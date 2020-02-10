@@ -165,7 +165,7 @@
 		min-height: 200px;
 		background: white;
 		color: black;
-		font-size: 18px;
+		font-size: 17px;
 		transform: translateY(-100%);
 		transition: transform 1s;
 	}

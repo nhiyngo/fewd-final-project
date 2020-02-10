@@ -15,10 +15,10 @@ const posterDetail = [
   'images/action2details.jpg',
   'images/action3details.jpg',
   'images/action4details.jpg',
-  'images/drama1details.jpg',
-  'images/drama2details.jpg',
-  'images/drama3details.jpg',
-  'images/drama4details.jpg',
+  'images/adrama1details.jpg',
+  'images/adrama2details.jpg',
+  'images/adrama3details.jpg',
+  'images/adrama4details.jpg',
 ]
 
 function openNavbar() {
@@ -61,16 +61,16 @@ function handlePosterClick(e) {
 
   // Grab the image src
   const imgSrc = movie.querySelector('img').src;
-  const imgSrcExtract = imgSrc.slice(22,36);
+  const imgSrcExtract = imgSrc.match(/(i)(\w+)......../)[0];
   const name = movie.querySelector('img').alt;
   const desc = movie.dataset.description;
 
   posterDetail.forEach(function(url) {
-    const urlDetailExtract = url.slice(0,14);
+    const urlDetailExtract = url.match(/(i)(\w+)......../)[0];
     if (imgSrcExtract.match(urlDetailExtract)) {
       // populate the modal with the new info
       modalInner.innerHTML =`
-      <img src="${urlDetailExtract}details.jpg" alt="${name}" />
+      <img width="100%" height="auto" src="${url}" alt="${name}" />
       <p>${desc}</>
     `;
     }
