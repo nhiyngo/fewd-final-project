@@ -21,18 +21,18 @@ const posterDetail = [
   'images/adrama4details.jpg',
 ]
 
+function close(element) {
+  element.classList.remove('open');
+}
+
 function openNavbar() {
   navbar.classList.toggle('open');
   content.addEventListener('click',function(e) {
     const outside = !e.target.closest('navbar');
     if (outside) {
-      closeNavbar();
+      close(navbar);
     }
   });
-}
-
-function closeNavbar() {
-  navbar.classList.remove('open');
 }
 
 function handleSmoothScroll() {
@@ -47,7 +47,7 @@ function handleSmoothScroll() {
         id.scrollIntoView({
           behavior: 'smooth',
         });
-      closeNavbar();
+      close(navbar);
     })
   );
 }
@@ -80,22 +80,18 @@ function handlePosterClick(e) {
   modalOuter.classList.add('open');
 }
 
-function closeModal() {
-  modalOuter.classList.remove('open');
-}
-
 moviePosters.forEach(poster => 
   poster.addEventListener('click', handlePosterClick));
 
 modalOuter.addEventListener('click',function(e) {
   const isOutside = !e.target.closest('.modal-inner');
-  if (isOutside){
-    closeModal();
+  if (isOutside) {
+    close(modalOuter);
   }
 });
 
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    closeModal();
+    close(modalOuter);
   }
 });
