@@ -7,18 +7,18 @@ const modalOuter = document.querySelector('.modal-outer');
 const modalInner = document.querySelector('.modal-inner');
 
 const posterDetail = [
-  'images/comedy1details.jpg',
-  'images/comedy2details.jpg',
-  'images/comedy3details.jpg',
-  'images/comedy4details.jpg',
-  'images/action1details.jpg',
-  'images/action2details.jpg',
-  'images/action3details.jpg',
-  'images/action4details.jpg',
-  'images/adrama1details.jpg',
-  'images/adrama2details.jpg',
-  'images/adrama3details.jpg',
-  'images/adrama4details.jpg',
+  'images/zcomedy1details.jpg',
+  'images/zcomedy2details.jpg',
+  'images/zcomedy3details.jpg',
+  'images/zcomedy4details.jpg',
+  'images/zaction1details.jpg',
+  'images/zaction2details.jpg',
+  'images/zaction3details.jpg',
+  'images/zaction4details.jpg',
+  'images/zadrama1details.jpg',
+  'images/zadrama2details.jpg',
+  'images/zadrama3details.jpg',
+  'images/zadrama4details.jpg',
 ]
 
 function close(element) {
@@ -61,12 +61,12 @@ function handlePosterClick(e) {
 
   // Grab the image src
   const imgSrc = movie.querySelector('img').src;
-  const imgSrcExtract = imgSrc.match(/(i)(\w+)......../)[0];
+  const imgSrcExtract = imgSrc.match(/(z)(\w{7})/)[0];
   const name = movie.querySelector('img').alt;
   const desc = movie.dataset.description;
 
   posterDetail.forEach(function(url) {
-    const urlDetailExtract = url.match(/(i)(\w+)......../)[0];
+    const urlDetailExtract = url.match(/(z)(\w{7})/)[0];
     if (imgSrcExtract.match(urlDetailExtract)) {
       // populate the modal with the new info
       modalInner.innerHTML =`
