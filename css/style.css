@@ -9,7 +9,7 @@
 body {
   font-family: "Overpass", sans-serif;
   color: #ccc;
-  background: url(/src/images/body-bg.gif);
+  background: url(images/body-bg.gif);
 }
 
 a {
@@ -72,7 +72,7 @@ a:hover {
 .rating .stars {
   width: 60px;
   height: 12px;
-  background: url(/src/images/stars.gif) no-repeat 0 bottom;
+  background: url(images/stars.gif) no-repeat 0 bottom;
 }
 
 .rating span {
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .comments {
-  background: url(/src/images/comments.gif) no-repeat 0 3px;
+  background: url(images/comments.gif) no-repeat 0 3px;
   padding-left: 12px;
 }
 
